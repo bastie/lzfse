@@ -64,7 +64,7 @@ static inline void *lzfse_reallocf(void *x, size_t s) {
   return y;
 }
 
-static double get_time() {
+static double get_time(void) {
 #if defined(_MSC_VER)
   LARGE_INTEGER count, freq;
   if (QueryPerformanceFrequency(&freq) && QueryPerformanceCounter(&count)) {

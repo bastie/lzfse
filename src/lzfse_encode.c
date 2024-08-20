@@ -24,7 +24,7 @@ ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSI
 #include "lzfse.h"
 #include "lzfse_internal.h"
 
-size_t lzfse_encode_scratch_size() {
+size_t lzfse_encode_scratch_size(void) {
   size_t s1 = sizeof(lzfse_encoder_state);
   size_t s2 = lzvn_encode_scratch_size();
   return (s1 > s2) ? s1 : s2; // max(lzfse,lzvn)
